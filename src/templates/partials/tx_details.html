@@ -9,13 +9,11 @@
     <span id="add_tx_pub_keys" style="display: none;">{{add_tx_pub_keys}}</span>
 
     {{#has_payment_id}}
-        <p>Payment id: <span id="payment_id" class="inline-code">{{payment_id}}</span></p>
-        <p>Payment id as ascii: <span class="inline-code">{{payment_id_as_ascii}}</span></p>
+        <p>Payment id: <span class="inline-code">{{payment_id}}</span></p>
     {{/has_payment_id}}
 
     {{#has_payment_id8}}
-        <p>Payment id (encrypted): <span id="payment_id" class="inline-code">{{payment_id8
-          }}</span></p>
+        <p>Payment id (encrypted): <span class="inline-code">{{payment_id8}}</span></p>
     {{/has_payment_id8}}
 
 
@@ -100,17 +98,8 @@
                                 value="{{raw_tx_data}}">
                         <!--above raw_tx_data field only used when checking raw tx data through tx pusher-->
 
-                        {{#enable_js}}
-                        <!-- if have js, DONOT submit the form to server.
-                             change submit button, to just a button -->
-                            <button class="button" type="button"
-                                    style="margin-top: 15px"
-                                     id="decode_btn" >Decode outputs</button>
-                        {{/enable_js}}
-                        {{^enable_js}}
-                            <input class="button" type="submit" value="Decode outputs"
-                                    style="margin-top: 15px" >
-                        {{/enable_js}}
+                        <input class="button" type="submit" value="Decode outputs"
+                                style="margin-top: 15px" >
                     </form>
                 </div>
             </div>
